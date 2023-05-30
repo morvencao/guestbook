@@ -3,4 +3,14 @@
 # It should be run by config/default
 resources:
 - bases/webapp.my.domain_guestbooks.yaml
+- bases/0000_00_cluster.open-cluster-management.io_managedclusters.crd.yaml
+- bases/0000_00_cluster.open-cluster-management.io_managedclustersetbindings.crd.yaml
+- bases/0000_00_cluster.open-cluster-management.io_managedclustersets.crd.yaml
+- bases/0000_00_cluster.open-cluster-management.io_placements.crd.yaml
+- bases/0000_00_policy.open-cluster-management.io_placementbindings.crd.yaml
+- bases/0000_00_policy.open-cluster-management.io_policies.crd.yaml
+- bases/0000_00_work.open-cluster-management.io_manifestworks.crd.yaml
+- bases/0000_01_addon.open-cluster-management.io_managedclusteraddons.crd.yaml
+- bases/0000_03_clusters.open-cluster-management.io_placementdecisions.crd.yaml
+
 #+kubebuilder:scaffold:crdkustomizeresource
