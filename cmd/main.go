@@ -34,12 +34,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/healthz"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	addonv1alpha1 "open-cluster-management.io/api/addon/v1alpha1"
 	clusterv1 "open-cluster-management.io/api/cluster/v1"
-	clusterv1beta1 "open-cluster-management.io/api/cluster/v1beta1"
-	clusterv1beta2 "open-cluster-management.io/api/cluster/v1beta2"
-	workv1 "open-cluster-management.io/api/work/v1"
-	policyv1 "open-cluster-management.io/governance-policy-propagator/api/v1"
 
 	webappv1 "my.domain/guestbook/api/v1"
 	"my.domain/guestbook/pkg/controller"
@@ -55,11 +50,6 @@ func init() {
 	utilruntime.Must(clientgoscheme.AddToScheme(scheme))
 	utilruntime.Must(webappv1.AddToScheme(scheme))
 	utilruntime.Must(clusterv1.AddToScheme(scheme))
-	utilruntime.Must(clusterv1beta1.AddToScheme(scheme))
-	utilruntime.Must(clusterv1beta2.AddToScheme(scheme))
-	utilruntime.Must(addonv1alpha1.AddToScheme(scheme))
-	utilruntime.Must(workv1.AddToScheme(scheme))
-	utilruntime.Must(policyv1.AddToScheme(scheme))
 	//+kubebuilder:scaffold:scheme
 }
 
